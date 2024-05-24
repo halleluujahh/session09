@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Array
+        let students = ["hoa", "lan", "ha", "minh"];
+        console.log(students[2]);
+        console.log("Số phần tử trong mảng students", students.length);
+        let arr = [null, undefined, [[[], "1"], 5]];
+        let numbers = [[2,3],[4,6],[9,5]];
+        let myArr = [];
+        /* students.push("mai"); // [hoa, lan, hà, minh, mai]
+        students.unshift("phương"); // [phương, hoa, lan, hà, minh, mai]*/
+        // students.splice(2, 0, "thu"); 
+        console.log("In ra các phần tử:");
+        let text = prompt("Nhập tên:");
+        for (let i = 0; i < students.length; i++){
+            if(students[i].toLowerCase() == text.toLowerCase()){
+                students.splice(i,1);
+            }
+            console.log("các user", students[i]);
+        }
+        console.log("update");       
+        students.splice(1, 1, "huệ");
+        console.log("students", students);
+
+        let student = [
+            {
+                name: "thu",
+                id: 112,
+                address: "hà nội",
+                age: 20
+            },
+            {
+                name: "thành",
+                id: 113,
+                address: "hà nam",
+                age: 22
+            },
+            {
+                name: "ngọc",
+                id: 114,
+                address: "hà hồi",
+                age: 21
+            }
+        ]
+        let check = [];
+        /* C1 */
+        // for(let k = 0; k<students.length; k++){
+        //     if(students[i]>18){
+        //         check.push(students[i]);
+        //     }
+        // }
+        /* C2 */
+        // let result = students.filter((student)=>student.age>18);
+    </script>
+</body>
+</html>

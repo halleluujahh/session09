@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        let array = [1, 3, 3, 5, 7, 7, 7, 8, 3];
+        let max = 0;
+        let count = 0;
+        let newArray = [];
+        for (let i = 0; i < array.length - 1; i++) {
+            count = 0;
+            for (let j = 0; j < array.length; j++) {
+                if (i > j && array[i] == array[j]) {
+                    break;
+                } else {
+                    if (array[i] == array[j]) {
+                        count++;
+                    }
+                }
+            }
+            if (count >= max) {
+                if (count > max) {
+                    newArray = [];
+                    max = count;
+                }
+                newArray.push([array[i], max]);
+            }
+        }
+        for (let i = 0; i < newArray.length; i++) {
+            let k = 0;
+            console.log(newArray[i][k] +" xuất hiện nhiều nhất " + newArray[i][k + 1] + " lần");
+        }
+    </script>
+  </body>
+</html>

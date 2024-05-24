@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let p = "co gang hoc lap trinh";
+        stringArray = p.split(" ");
+        let result = '';
+        console.log(stringArray);
+        for(let i = 0; i < stringArray.length; i++){
+            stringArray[i] = stringArray[i][0].toUpperCase() + stringArray[i].slice(1).toLowerCase();
+        }
+        console.log(stringArray);
+    </script>
+</body>
+</html>
