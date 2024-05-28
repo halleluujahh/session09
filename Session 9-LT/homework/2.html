@@ -12,10 +12,8 @@
         let count = 0;
         for(let i = 0; i<a.length;i++){
             count = 0;
-            for(let j = 0; j < a.length; j++){
-                if (i > j && a[i] == a[j]) {
-                    break;
-                }else if(a[i]==a[j]){
+            for(let j = i; j < a.length; j++){
+                if(a[i]==a[j]){
                     count++;
                 }
             }

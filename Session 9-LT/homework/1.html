@@ -13,13 +13,9 @@
         let newArray = [];
         for (let i = 0; i < array.length - 1; i++) {
             count = 0;
-            for (let j = 0; j < array.length; j++) {
-                if (i > j && array[i] == array[j]) {
-                    break;
-                } else {
-                    if (array[i] == array[j]) {
+            for (let j = i; j < array.length; j++) {
+                if (array[i] == array[j]) {
                         count++;
-                    }
                 }
             }
             if (count >= max) {
